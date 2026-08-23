@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 240" role="img" aria-labelledby="title desc">
+  <title id="title">Huaqiang Game Lab</title>
+  <desc id="desc">A warm yellow scale mark on a dark industrial background.</desc>
+  <rect width="960" height="240" rx="28" fill="#111510"/>
+  <path d="M70 68h178l-18 28H88zM92 104h134l-22 72H114zM159 176h74v18h-74z" fill="#e8c95b"/>
+  <path d="M128 80h62M135 112h48M129 139h60" stroke="#111510" stroke-width="8" stroke-linecap="round" opacity=".65"/>
+  <circle cx="181" cy="77" r="11" fill="#f7e8a1"/>
+  <text x="290" y="112" fill="#f7e8a1" font-family="sans-serif" font-size="58" font-weight="700">HUAQIANG GAME LAB</text>
+  <text x="294" y="157" fill="#aeb6a3" font-family="sans-serif" font-size="24" letter-spacing="4">OBSERVE · PREPARE · CONSEQUENCE</text>
+</svg>
