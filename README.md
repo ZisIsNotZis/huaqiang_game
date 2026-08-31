@@ -98,6 +98,10 @@ More captures: [`vertical_slice/screenshots/`](一斤八两/vertical_slice/scree
 
 The intended end state is an offline, single-player PC game with dense semi-open neighbourhoods, but that is a target—not a promise or release commitment.
 
+## Versioning and agent help
+
+This collection is versioned as `0.1.0`; [`CHANGELOG.md`](CHANGELOG.md) is the release-note source. The active game’s detailed design source is [`一斤八两/docs/designs/`](一斤八两/docs/designs/), while current gates and evidence live under [`一斤八两/docs/`](一斤八两/docs/). Agents may help triage, test, document, and implement accepted work, but owners review stage-gate decisions and maintainers review and merge changes.
+
 ## Caveats
 
 This is unfinished. Art, animation, voice, audio, and camera are not final quality. Godot is validated on Linux with 4.7.1; other platforms are unverified. Automated tests validate rules and technical paths, not fun, market demand, accessibility completeness, or owner acceptance. Do not infer financing, authorization, external playtesting, a release date, or production approval.
@@ -105,6 +109,8 @@ This is unfinished. Art, animation, voice, audio, and camera are not final quali
 ## Contributing
 
 Start with [`一斤八两/CONTRIBUTING.md`](一斤八两/CONTRIBUTING.md). Keep changes small and evidence-backed, preserve stage gates, and do not add unlicensed media or material derived from protected source works. Documentation, reproducible tests, and clearly described design experiments are welcome.
+
+Open issues with the affected path, reproduction, and evidence. PRs should state which gate they affect and include the smallest relevant test or capture. No new Bilibili upload or arXiv paper is being invented; existing screenshots and audio remain subject to provenance review.
 
 ## License
 

@@ -59,7 +59,7 @@ cd ../prototype && python -m unittest discover -s tests -v && python play.py
 
 ## 文档入口
 
-- [完整开发计划](dev_plan.md)
+- [完整开发计划（分册索引）](docs/designs/README.md)
 - [项目章程](docs/project-charter.md)
 - [原创化与知识产权边界](docs/originality-and-ip.md)
 - [风险登记表](docs/risk-register.md)
