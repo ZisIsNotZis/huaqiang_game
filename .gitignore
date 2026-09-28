@@ -25,3 +25,14 @@ npm-debug.log*
 .env
 .env.*
 !.env.example
+
+# Common local caches and temporary workspaces
+.pi/
+.tmp/
+worktrees/
+.worktrees/
+
+# Local secrets, test caches, and generated logs
+.ruff_cache/
+.mypy_cache/
+.cache/
