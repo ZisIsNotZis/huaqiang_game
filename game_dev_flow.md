@@ -35,14 +35,10 @@ Goal: Kill unviable ideas cheaply before resource investment; lock core value pr
 Goal: Fully document systems, build validated playable vertical slice, establish standardized production pipelines, lock all creative/technical specs.
 Split into two sub-stages: Rapid Prototyping → Vertical Slice Milestone
 ## Substage 2.1: Rapid Iterative Prototyping (2–12 weeks)
-1. **Full Game Design Document (GDD) – Single source of truth**
-   SOTA GDD structure: Core loop, progression, combat/interaction systems, narrative structure, quest logic, UI/UX flow, accessibility specs, monetization, live ops roadmap, feature backlog split into MVP (launch) vs post-launch stretch goals.
-2. **Technical Design Document (TDD) – Engineering blueprint**
-   Engine architecture, render pipeline, netcode/backend stack, database schema, asset import/export rules, profiling/performance baselines, cross-platform compliance, automated test suite plan, CI/CD build workflow design.
-3. **Art Bible + Audio Style Guide**
-   Fixed visual language, PBR material specs, color grading LUT rules, character polygon budgets, LOD tiers, audio mixing standards, voiceover tone guidelines; universal asset naming schema enforced: `[TYPE]_[NAME]_[VARIANT]_[VERSION]` (e.g., CHR_Player_Male_v004.fbx).
-4. **Fast disposable paper/engine prototypes (multiple iterations)**
-   Test risky mechanics only (e.g., boss AI, inventory, movement physics). Run blind external playtests (minimum n=15 participants) to collect quantitative session retention, frustration points, loop satisfaction metrics.
+1. **Full Game Design Document (GDD) – Single source of truth** SOTA GDD structure: Core loop, progression, combat/interaction systems, narrative structure, quest logic, UI/UX flow, accessibility specs, monetization, live ops roadmap, feature backlog split into MVP (launch) vs post-launch stretch goals.
+2. **Technical Design Document (TDD) – Engineering blueprint** Engine architecture, render pipeline, netcode/backend stack, database schema, asset import/export rules, profiling/performance baselines, cross-platform compliance, automated test suite plan, CI/CD build workflow design.
+3. **Art Bible + Audio Style Guide** Fixed visual language, PBR material specs, color grading LUT rules, character polygon budgets, LOD tiers, audio mixing standards, voiceover tone guidelines; universal asset naming schema enforced: `[TYPE]_[NAME]_[VARIANT]_[VERSION]` (e.g., CHR_Player_Male_v004.fbx).
+4. **Fast disposable paper/engine prototypes (multiple iterations)** Test risky mechanics only (e.g., boss AI, inventory, movement physics). Run blind external playtests (minimum n=15 participants) to collect quantitative session retention, frustration points, loop satisfaction metrics.
 5. **Cut scope ruthlessly based on prototype data**: Any mechanic failing playtest KPIs deprioritized to post-launch.
 
 ## Substage 2.2: Vertical Slice Milestone (Critical Pre-Production Gate)
