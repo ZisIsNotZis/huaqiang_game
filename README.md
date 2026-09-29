@@ -17,6 +17,9 @@ This repository is a home for Huaqiang game experiments. Its main artifact is **
 
 The design question: can a tense encounter be won through **observation, social pressure, spatial preparation, and an escape plan** rather than a conventional combat loop? It is tested at three levels—rules prototype, browser greybox, and Godot vertical slice—alongside decision, risk, and originality records.
 
+> **Status: paused (indefinite, 2026-09-29).** An exploratory game-design test;
+> it is not under active development.
+
 This is an **experimental Phase 4 engineering candidate**, not a finished game, commercial release, or claim of external playtest validation.
 
 ## What is here
