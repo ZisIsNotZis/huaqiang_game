@@ -33,10 +33,10 @@
 
 ```bash
 # 浏览器灰盒（Node.js + Python 3）
-cd greybox && npm test && npm start
+cd 一斤八两/greybox && npm test && npm start
 
 # 规则原型（Python 3）
-cd ../prototype && python -m unittest discover -s tests -v && python play.py
+cd 一斤八两/prototype && python -m unittest discover -s tests -v && python play.py
 ```
 
 3D 切片需要 **Godot 4.7.1 stable**，运行、测试、截图和 Linux 导出命令见 [`vertical_slice/README.md`](vertical_slice/README.md)。
@@ -73,20 +73,13 @@ cd ../prototype && python -m unittest discover -s tests -v && python play.py
 - [Phase 4 进度](docs/phase-4-progress.md)
 - [Godot 垂直切片基础版](vertical_slice/README.md)
 
-## 运行交互灰盒
-
-```bash
-cd huaqiang_game/一斤八两/greybox
-npm test
-npm start
-```
-- [贡献与版本规范](CONTRIBUTING.md)
-
 ## 本地检查
 
+在仓库根目录执行：
+
 ```bash
-bash tools/validate_phase0.sh
-bash tools/validate_phase1.sh
+bash 一斤八两/tools/validate_phase0.sh
+bash 一斤八两/tools/validate_phase1.sh
 ```
 
 该命令只检查 Phase 0 文档和目录是否完整，不代表法律、融资、人员或市场验证已经通过。

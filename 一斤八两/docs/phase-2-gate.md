@@ -47,6 +47,6 @@ Phase 3 不应直接制作完整三维街区。应先：
 所有者可运行：
 
 ```bash
-cd huaqiang_game/一斤八两/prototype
+cd 一斤八两/prototype
 python play.py
 ```

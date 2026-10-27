@@ -24,7 +24,7 @@
 ## 运行
 
 ```bash
-cd huaqiang_game/一斤八两/greybox
+cd 一斤八两/greybox
 npm test
 npm start
 ```

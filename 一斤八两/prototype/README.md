@@ -5,14 +5,14 @@
 ## 运行测试
 
 ```bash
-cd huaqiang_game/一斤八两/prototype
+cd 一斤八两/prototype
 python -m unittest discover -s tests -v
 ```
 
 ## 试玩
 
 ```bash
-cd huaqiang_game/一斤八两/prototype
+cd 一斤八两/prototype
 python play.py
 ```
 

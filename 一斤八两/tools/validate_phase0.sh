@@ -6,7 +6,7 @@ project_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 required_files=(
   "README.md"
   "CONTRIBUTING.md"
-  "dev_plan.md"
+  "docs/designs/README.md"
   "docs/project-charter.md"
   "docs/originality-and-ip.md"
   "docs/risk-register.md"
