@@ -1,51 +1,25 @@
+![Huaqiang Game Lab](assets/huaqiang-game-lab.svg)
+
 # Huaqiang Game Lab
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-![Huaqiang Game Lab logo](assets/huaqiang-game-lab.svg)
+**《一斤八两》 is a third-person social-stealth prototype about winning the encounter before it starts.** Set in 铁衡市, a fictional late-1990s Chinese industrial city, it asks you to read the room, move the furniture, test the people, and make the witnesses tell your version of the story.
 
-> A small, evidence-led game design lab exploring **social stealth**, readable consequences, and high-pressure encounters in an original Chinese industrial-city setting.
+> **Observe. Prepare. Consequence.** A small game-design lab testing whether observation, social pressure, spatial preparation, and an escape plan can carry a tense scene without a conventional combat loop.
 
-[![Status: experimental](https://img.shields.io/badge/status-experimental-d6a84f)](一斤八两/README.md)
-[![Engine: Godot 4.7.1](https://img.shields.io/badge/engine-Godot%204.7.1-478cbf)](一斤八两/vertical_slice/README.md)
-[![Tests included](https://img.shields.io/badge/tests-included-2f855a)](一斤八两/README.md)
-[![License: AGPL v3](https://img.shields.io/badge/license-AGPL--3.0-only-cc0000)](LICENSE)
+> **Status: paused indefinitely (2026-09-29).** This is an exploratory Phase 4 engineering candidate, not a finished game or an active production.
 
-## In 30 seconds
+![The Godot vertical slice: a greybox street market with the player, stall, witnesses, and interaction UI](一斤八两/vertical_slice/screenshots/vertical_slice.png)
 
-This repository is a home for Huaqiang game experiments. Its main artifact is **《一斤八两》**, a third-person social-stealth / action-thriller prototype set in the fictional late-1990s industrial city of 铁衡市.
-
-The design question: can a tense encounter be won through **observation, social pressure, spatial preparation, and an escape plan** rather than a conventional combat loop? It is tested at three levels—rules prototype, browser greybox, and Godot vertical slice—alongside decision, risk, and originality records.
-
-> **Status: paused (indefinite, 2026-09-29).** An exploratory game-design test;
-> it is not under active development.
-
-This is an **experimental Phase 4 engineering candidate**, not a finished game, commercial release, or claim of external playtest validation.
-
-## What is here
-
-| Area | Purpose | Start here |
-| --- | --- | --- |
-| `一斤八两/` | Main concept, design records, prototypes, and vertical slice | [Game README](一斤八两/README.md) |
-| `一斤八两/prototype/` | Python rules model for facts, witnesses, space, conflict, and narrative | [Prototype guide](一斤八两/prototype/README.md) |
-| `一斤八两/greybox/` | Dependency-light browser interaction greybox | `npm test` then `npm start` |
-| `一斤八两/vertical_slice/` | Godot 4.7.1 3D playable slice with tests and captures | [Godot guide](一斤八两/vertical_slice/README.md) |
-| `ideas/` | Adjacent short-form concepts | [Ideas index](ideas/README.md) |
-| `game_dev_flow.md` | Development-process reference | [Workflow](game_dev_flow.md) |
-
-## Why this approach 🎮
-
-- **Preparation changes the outcome:** object positions, witnesses, routes, and public commitments affect what happens next.
-- **Two stories survive an event:** the system distinguishes what happened from what witnesses and authorities believe happened.
-- **Three playable routes:** the current slice supports public pressure, prepared withdrawal, and an unprepared escape with injury.
-- **Three validation layers:** Python rules, a browser greybox, and a rendered Godot slice expose assumptions before expensive production.
-- **Low-cost iteration:** the world is intentionally procedural and greybox-quality, testing interaction and consequence before final art.
+*The Godot 4.7.1 vertical slice in its current greybox state.*
 
 ## Quick start
 
-Requires Node.js and Python 3 for the first two paths:
+The browser greybox needs Node.js and Python 3; the rules prototype needs Python 3. Neither needs a build step.
 
 ```bash
+# Browser greybox: interaction, state changes, and event log
 cd 一斤八两/greybox
 npm test
 npm start
@@ -53,12 +27,13 @@ npm start
 ```
 
 ```bash
+# Python rules prototype: facts, witnesses, space, conflict, narrative
 cd 一斤八两/prototype
 python -m unittest discover -s tests -v
 python play.py
 ```
 
-For the 3D slice, install **Godot 4.7.1 stable**, set `GODOT_BIN` if needed, then run:
+For the 3D slice, install **Godot 4.7.1 stable**, then:
 
 ```bash
 export GODOT_BIN=/path/to/Godot_v4.7.1-stable_linux.x86_64
@@ -67,54 +42,87 @@ bash tools/run_godot.sh
 bash tools/test_godot.sh
 ```
 
-`WASD` / arrows move, the mouse rotates the camera, `E` performs the nearest valid interaction, and `Esc` pauses/releases the mouse. Capture and Linux export scripts are documented in the Godot README.
+`WASD` / arrow keys move, the mouse rotates the camera, `E` performs the nearest valid interaction, and `Esc` pauses and releases the mouse. Capture and Linux export scripts are documented in the [vertical slice guide](一斤八两/vertical_slice/README.md).
 
-## See it
+## What it can do now
 
-Existing rendered evidence from the vertical slice:
+- **Three complete routes through the first chapter:** public pressure, prepared withdrawal, and an unprepared injured escape. Each ends with neighbourhood and police versions of the event, plus a next-chapter hook.
+- **Keep facts and stories separate:** the system tracks what happened, what witnesses know, and what the street and authorities believe happened.
+- **Make perception explainable:** distance, view angle, physical occlusion, and sound decide whether an action is seen or heard — and the UI says why.
+- **Make space a resource:** moving a stool, choosing a position, or arranging a getaway changes the available outcomes.
+- **Hold a real slice together:** third-person movement, collision, context actions, checkpoints, settings and accessibility options, procedural audio, automated tests, and rendered captures.
+- **Validate in three layers:** a Python rules model, a browser greybox, and a Godot 3D slice expose assumptions before art and content get expensive.
 
-| Arrival / interaction space | Resolved event |
-| --- | --- |
-| ![Godot vertical slice](一斤八两/vertical_slice/screenshots/vertical_slice.png) | ![Resolved event](一斤八两/vertical_slice/screenshots/resolved.png) |
+## Architecture
 
-More captures: [`vertical_slice/screenshots/`](一斤八两/vertical_slice/screenshots/).
+The repository is deliberately layered: each layer validates a different risk before the next one costs more.
 
-## Goals and non-goals
+| Layer | Path | What it proves |
+| --- | --- | --- |
+| Rules prototype | `一斤八两/prototype/` | Facts, witnesses, spatial preparation, conflict outcomes, and the two public versions of an event. |
+| Browser greybox | `一斤八两/greybox/` | Step-by-step interaction and readable NPC reactions with no build step. |
+| Godot slice | `一斤八两/vertical_slice/` | Third-person movement, perception, sound, conflict, checkpoints, settings, and rendered evidence. |
+| Design record | `一斤八两/docs/` | Phase gates, decisions, risks, the originality/IP boundary, and the split development plan. |
+| Idea book | `ideas/` | Four adjacent concepts built from the same street-market premise. |
+| Process reference | `game_dev_flow.md` | The working reference for the project's gated game-development process. |
 
-### Goals
+The main design source is indexed at [`一斤八两/docs/designs/`](一斤八两/docs/designs/); current gates and evidence live in [`一斤八两/docs/`](一斤八两/docs/).
 
-- Prove a compact, replayable social-stealth encounter with legible consequences.
-- Make preparation visible through NPC behaviour and event logs.
-- Build toward a **6–8 hour** single-player PC game only if the slice earns it.
+## How to develop
 
-### Non-goals
+- **Rules prototype:** `cd 一斤八两/prototype && python -m unittest discover -s tests -v`
+- **Browser greybox:** `cd 一斤八两/greybox && npm test`
+- **Godot slice:** set `GODOT_BIN`, then `cd 一斤八两/vertical_slice && bash tools/test_godot.sh`
+- **Document checks:** `bash 一斤八两/tools/validate_phase0.sh` and `bash 一斤八两/tools/validate_phase1.sh`
+- **Before committing:** keep generated state, local caches, exports, and secrets out of the tree; `.gitignore` already covers the main cases.
 
-- No open-world crime sandbox, multiplayer, live service, or procedural main story.
-- No generic combo-driven action loop or “find every highlighted clue” formula.
-- No protected television characters, dialogue, recordings, music, likenesses, or shots; see [`一斤八两/docs/originality-and-ip.md`](一斤八两/docs/originality-and-ip.md).
+The greybox is plain HTML, CSS, and ES modules. The prototype is plain Python. The slice is a Godot project with its own run, test, capture, and export scripts.
 
-## Roadmap 🧭
+## How to contribute
 
-1. **Now — owner acceptance:** complete all three routes and record duration, clarity, and replay desire.
-2. **Next — slice refinement:** address only acceptance findings; decide whether the low-poly and procedural-audio direction earns more investment.
-3. **Later — production decision:** if the slice passes, scope a small complete game; otherwise shrink, redirect, or stop.
+Start with [`CONTRIBUTING.md`](CONTRIBUTING.md), then read the [game-specific contribution rules](一斤八两/CONTRIBUTING.md) before changing the main project. Keep changes small and evidence-backed, preserve the existing phase gates, and do not add unlicensed media or material derived from protected source works.
 
-The intended end state is an offline, single-player PC game with dense semi-open neighbourhoods, but that is a target—not a promise or release commitment.
+Good contributions include reproducible tests, documentation fixes, accessible UI improvements, small rules experiments, and clearly labelled design evidence. For a PR, state which gate the change affects and include the smallest relevant test or capture. For a docs change, say what you checked.
 
-## Versioning and agent help
+## Roadmap
 
-This collection is versioned as `0.1.0`; [`CHANGELOG.md`](CHANGELOG.md) is the release-note source. The active game’s detailed design source is [`一斤八两/docs/designs/`](一斤八两/docs/designs/), while current gates and evidence live under [`一斤八两/docs/`](一斤八两/docs/). Agents may help triage, test, document, and implement accepted work, but owners review stage-gate decisions and maintainers review and merge changes.
+### Implemented
+
+- [x] Phase 0 repository and concept checks.
+- [x] Phase 1–3: concept, Python rules prototype, browser greybox, and engine decision, all passed as **Conditional Go**.
+- [x] Phase 4 engineering candidate: a Godot 4.7.1 vertical slice with the first chapter's full flow.
+- [x] Three routes from opening to result: public pressure, prepared withdrawal, and unprepared injured escape.
+- [x] Perception, sound, conflict, checkpoints, settings, procedural audio, automated tests, and rendered evidence.
+- [x] Splittable design plan, decision register, risk register, and originality/IP record.
+
+### Planned — currently paused
+
+- [ ] Owner acceptance of all three routes: duration, clarity, replay desire, and whether the greybox visual/audio direction represents the intended game.
+- [ ] Slice refinement, limited to findings from that acceptance.
+- [ ] A production decision: scope a small complete game only if the slice earns it; otherwise shrink, redirect, or stop.
+
+Owner acceptance is the next gate. It has not been completed, so Phase 5 has not started.
+
+## Future vision
+
+If the slice earns it, the target is an offline, single-player PC game set in dense semi-open neighbourhoods, where preparation and social pressure matter more than a combo meter. That is a direction for the work, not a release date or a promise of production approval.
+
+## Project records
+
+- [Development plan index](一斤八两/docs/designs/README.md)
+- [Project charter](一斤八两/docs/project-charter.md)
+- [Originality and IP boundary](一斤八两/docs/originality-and-ip.md)
+- [Risk register](一斤八两/docs/risk-register.md)
+- [Decision register](一斤八两/docs/decision-register.md)
+- [Phase 4 progress](一斤八两/docs/phase-4-progress.md)
+- [Changelog](CHANGELOG.md)
 
 ## Caveats
 
-This is unfinished. Art, animation, voice, audio, and camera are not final quality. Godot is validated on Linux with 4.7.1; other platforms are unverified. Automated tests validate rules and technical paths, not fun, market demand, accessibility completeness, or owner acceptance. Do not infer financing, authorization, external playtesting, a release date, or production approval.
+This is unfinished. Art, animation, voice, audio, and camera are not final quality. Godot is validated on Linux with 4.7.1; other platforms are unverified. Automated tests validate rules and technical paths, not fun, market demand, accessibility completeness, or owner acceptance.
 
-## Contributing
-
-Start with [`一斤八两/CONTRIBUTING.md`](一斤八两/CONTRIBUTING.md). Keep changes small and evidence-backed, preserve stage gates, and do not add unlicensed media or material derived from protected source works. Documentation, reproducible tests, and clearly described design experiments are welcome.
-
-Open issues with the affected path, reproduction, and evidence. PRs should state which gate they affect and include the smallest relevant test or capture. No new Bilibili upload or arXiv paper is being invented; existing screenshots and audio remain subject to provenance review.
+Do not infer financing, authorization, external playtesting, a release date, or production approval from this repository.
 
 ## License
 
-Unless a nested artifact states otherwise, this collection is licensed under [GNU Affero General Public License v3.0 only](LICENSE).
+Unless a nested artifact states otherwise, this collection is licensed under the [GNU Affero General Public License v3.0 only](LICENSE).
