@@ -1,6 +1,8 @@
 # SOTA Industry-Standard Game Development Workflow (2026)
 Full end-to-end pipeline: raw idea → fully polished, certifiable, live game product. This synthesis aggregates AAA studio pipelines, leading indie best practices, GDC industry guidelines, modern Agile for games, and unified asset/CI/CD standards applicable to solo, small indie, AA, and large AAA teams.
 
+> **Provenance:** these are working notes compiled for this project from general industry practice, not measured data. Percentages, ranges and tier figures below are informal heuristics, not verified benchmarks, and this repository does not run the CI/CD build infrastructure the notes describe.
+
 ## Core Foundational SOTA Principles (Universal for All Team Sizes)
 1. **Pre-production de-risks 60–70% of downstream waste**: Studios allocating 30–40% of total dev timeline to pre-production cut full-project rework by 65% (2026 cross-studio benchmark data).
 2. **Continuous playtesting + data validation over subjective opinion**: Every phase must include external blind playtests, not just internal team reviews.
