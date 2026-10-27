@@ -1,6 +1,6 @@
 # 一斤八两
 
-[English](../README.md) · [简体中文](README.md)
+[English](../README.md) · **简体中文**
 
 ![一斤八两 vertical slice](vertical_slice/screenshots/vertical_slice.png)
 
@@ -18,7 +18,7 @@
 
 项目已完成 Phase 0，并以 **Conditional Go** 通过 Phase 1–3。当前处于 **Phase 4**，已建立 Godot 4.7.1 垂直切片基础版，但尚未达到完整垂直切片门槛。
 
-不得在 Phase 0 阶段对外宣称游戏已进入制作、获得授权、完成融资或确定发行日期。
+在所有者验收通过之前，不得对外宣称游戏已进入制作、获得授权、完成融资或确定发行日期。
 
 ## 为什么值得关注 🎮
 
