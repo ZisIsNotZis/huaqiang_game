@@ -20,19 +20,15 @@ npm-debug.log*
 **/build/
 **/*.import
 
-# Local logs and secrets
-*.log
-.env
-.env.*
-!.env.example
-
-# Common local caches and temporary workspaces
+# Local state, caches, logs, and secrets
 .pi/
 .tmp/
 worktrees/
 .worktrees/
-
-# Local secrets, test caches, and generated logs
 .ruff_cache/
 .mypy_cache/
 .cache/
+*.log
+.env
+.env.*
+!.env.example
