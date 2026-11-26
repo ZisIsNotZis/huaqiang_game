@@ -2,6 +2,8 @@
 
 # Huaqiang Game Lab
 
+**项目状态 · 暂缓（2026-11-26）**。README 明确无限期暂停，Phase 4 浏览器灰盒和规则原型存在，不能表述为制作完成。 保留暂停事实；复活前先验收「观察→准备→后果」的可玩体验。
+
 [English](README.md) · [简体中文](README.zh-CN.md)
 
 **《一斤八两》 is a third-person social-stealth prototype about winning the encounter before it starts.** Set in 铁衡市, a fictional late-1990s Chinese industrial city, it asks you to read the room, move the furniture, test the people, and make the witnesses tell your version of the story.
